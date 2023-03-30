@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css';
-import {TextField} from '@mui/material'
+import {MenuItem, TextField} from '@mui/material'
+import Categories from '../../Data/Categories';
 
 const Home = () => {
   return (
@@ -14,7 +15,16 @@ const Home = () => {
           <TextField
           select label='Select Category'
           variant='outlined'
-          style={{marginBottom: 30}}/>
+          style={{marginBottom: 30}}>
+            {
+              Categories.map((cat) => (
+              <MenuItem key = { cat.category} value={cat.value}>
+                {cat.category}
+              </MenuItem>
+              ))
+            }
+            
+          </TextField>
 
         </div>
  
