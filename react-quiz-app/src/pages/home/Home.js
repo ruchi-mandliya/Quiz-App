@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css';
-import {MenuItem, TextField} from '@mui/material'
+import {MenuItem, TextField,Button} from '@mui/material'
 import Categories from '../../Data/Categories';
 
 const Home = () => {
@@ -25,6 +25,30 @@ const Home = () => {
             }
             
           </TextField>
+          <TextField
+            select
+            label="Select Difficulty"
+            // value={difficulty}
+            // onChange={(e) => setDifficulty(e.target.value)}
+            variant="outlined"
+            style={{ marginBottom: 30 }}
+          >
+            <MenuItem key="Easy" value="easy">
+              Easy
+            </MenuItem>
+            <MenuItem key="Medium" value="medium">
+              Medium
+            </MenuItem>
+            <MenuItem key="Hard" value="hard">
+              Hard
+            </MenuItem>
+          </TextField>
+          <Button variant ="contained" color = 'primary' size ='large'>
+            Start Quiz
+
+          </Button>
+
+          
 
         </div>
  
