@@ -1,0 +1,36 @@
+.content {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .settings {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+  }
+  
+  .banner {
+    width: 50%;
+    align-self: center;
+    padding: 8px;
+  }
+  
+  @media (max-width: 800px) {
+    .content {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .banner {
+      width: 85%;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    .settings {
+      width: 100%;
+    }
+  }
+  
